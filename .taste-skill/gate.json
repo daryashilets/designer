@@ -1,0 +1,437 @@
+{
+ "start": "2026-11-18T10:35:23.166Z",
+ "round": 3,
+ "idle": 0,
+ "errors": 0,
+ "status": "open",
+ "history": [
+  {
+   "at": "2026-11-18T11:09:07.768Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 44,
+   "round": 1,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-18T11:09:13.089Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 44,
+   "round": 1,
+   "reused": true,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-18T11:11:39.598Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 8,
+   "round": 2,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-18T11:14:15.724Z",
+   "mode": "manual",
+   "status": "open",
+   "fails": 4,
+   "round": 3,
+   "reused": false,
+   "stopHookActive": false
+  }
+ ],
+ "max": 3,
+ "marker": {
+  "page": "index.html",
+  "url": null,
+  "root": null,
+  "kind": "service",
+  "category": "interior design",
+  "primary": "Book a consultation",
+  "rounds": 3,
+  "start": "2026-11-18T10:35:23.166Z",
+  "by": "gate.mjs --start"
+ },
+ "manual": true,
+ "roundKey": "5792b21e833c3010:dfc47380",
+ "roundFree": false,
+ "idleFree": false,
+ "blockKey": null,
+ "fp": "5792b21e833c3010",
+ "page": "index.html",
+ "found": {
+  "fails": [
+   {
+    "check": "copy-headline",
+    "where": "h1#hero-h \"Дизайн интерьера квартир в Минске\"",
+    "msg": "\"Дизайн интерьера квартир в Минске\" does not name what is sold (interior design, interior, design, from flags)",
+    "fix": "put the category noun in the h1 (and who it is for, or where), in 2 to 8 words",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "copy-headline"
+    ],
+    "wheres": [
+     "h1#hero-h \"Дизайн интерьера квартир в Минске\""
+    ]
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#steps / section#book",
+    "msg": "505px between these sections, +258% against the median 141px of gaps at a change of ground",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-gaps"
+    ],
+    "wheres": [
+     "section#steps / section#book"
+    ]
+   },
+   {
+    "check": "hero-lines",
+    "where": "section.hero h1",
+    "msg": "the check fills the h1 to 33 characters (this hero's maxChars in heroes.json), not the page's own: it takes 4 lines at 1440, 3 at most",
+    "fix": "the check fills the h1 to this hero's maxChars, not your own: take the next type pairing the deal printed (start.mjs); when the h1 is final and fits, waive it (target: section.hero h1)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "hero-lines"
+    ],
+    "wheres": [
+     "section.hero h1"
+    ]
+   },
+   {
+    "check": "hero-fold",
+    "where": "section.hero.hero--photo section.hero.hero--photo \"Дизайн интерьера квартир в Минск\"",
+    "msg": "ends at y 886, past the fold (844): 1.05 screens tall",
+    "fix": "the hero fills the first screen alone, its button inside it",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "hero-fold"
+    ],
+    "wheres": [
+     "section.hero.hero--photo section.hero.hero--photo \"Дизайн интерьера квартир в Минск\""
+    ]
+   },
+   {
+    "check": "hero-maxchars",
+    "where": "section.hero.hero--photo section.hero.hero--photo \"Дизайн интерьера квартир в Минск\"",
+    "msg": "with a 33-character h1 (heroes.json maxChars): ends at y 886, past the fold (844): 1.05 screens tall",
+    "fix": "shorten the h1 or give the hero room for the longest headline",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "hero-maxchars"
+    ],
+    "wheres": [
+     "section.hero.hero--photo section.hero.hero--photo \"Дизайн интерьера квартир в Минск\""
+    ]
+   }
+  ],
+  "warns": [
+   {
+    "check": "scroll-reveal",
+    "where": "section#approach > div.wrap > p.mo-wh__text \"Я начинаю с того, как вы живёте: кто вст\"",
+    "msg": "starts \"color\" (0.2 s) the moment it is scrolled into view (an IntersectionObserver) on span.mo-w:nth-of-type(1) (inside a dealt moment's section, [data-moment]: an enter moment is expected on every kind; its still is judged under reduced motion)",
+    "fix": "show it at rest: no fade, rise or unmask when it is scrolled into view",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "no-visual",
+    "where": "section#book \"Запись на встречу\"",
+    "msg": "pictures, effects and mocks cover 21% of this section; a feature section needs a visual (about 25% or more)",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-headline",
+    "where": "h1#hero-h \"Дизайн интерьера квартир в Минске\"",
+    "msg": "the h1 has 0 words (2 to 8 read at a glance)",
+    "fix": "put the category noun in the h1 (and who it is for, or where), in 2 to 8 words",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-actions",
+    "where": "(the page)",
+    "msg": "the main action \"Book a consultation\" does not read word for word the same in the nav or hero and the closing section",
+    "fix": "few actions, one wording: at most 2 in the hero, the main action word for word in nav, hero and close",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "main#top > section.hero.hero--photo / section#services",
+    "msg": "115px between these sections, -42% against the median 199px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "photo-set",
+    "where": "div.grid > article.card.card--row:nth-of-type(1) > div.panel > img.frame__img \"photo-f119221397-960.webp\"",
+    "msg": "5 photographs in more than one look: saturation from 0.08 to 0.40; the odd one out is photo-f119221397-960.webp",
+    "fix": "grade the photographs to one look (light, colour, warmth), or replace the odd one out",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "photo-credit",
+    "where": "(the page text)",
+    "msg": "1 library source (wikimedia): the page credits wikimedia; confirm each shows the client's own product, place or people",
+    "fix": "confirm the library photograph shows the client's own product, place or people; otherwise replace it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-current",
+    "where": "header.nav.nav--centre",
+    "msg": "the nav stays on screen with 4 links to the page's sections, but never marks the one you are in (no link changes as the page scrolls)",
+    "fix": "mark the link of the section on screen (a colour, a weight or a line under it) as the visitor scrolls",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "grounds",
+    "where": "main#top > section.hero.hero--photo \"Дизайн интерьера квартир в Минске Дизайн\"",
+    "msg": "4 flat grounds across the page (#1b1b1b section, #f4efe5 section x4, #e7dfcf section, #29251e footer): three at most (the base, a surface, an inverse)",
+    "fix": "three flat grounds at most (the base, one surface, one inverse): lay the other bands on one of them",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "skip-link",
+    "where": "header.nav.nav--centre > div.wrap.nav__bar > a.skip-link:nth-of-type(1) \"К содержанию\"",
+    "msg": "the first Tab stop is \"К содержанию\", not a skip link: a keyboard user tabs through the whole nav on every visit",
+    "fix": "add the starter's skip link as the header's first child: <a class=\"skip-link\" href=\"#top\">Skip to content</a>",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "action-repeat",
+    "where": "header.nav.nav--centre > div.wrap.nav__bar > div.nav__actions > a.btn.btn--primary \"записаться на встречу\"",
+    "msg": "\"записаться на встречу\" shows 2 times on the first screen at 1440px (nav, hero): the nav's button and the hero's; nothing else on the screen may repeat it",
+    "fix": "show the action once a screen besides the nav's button: the hero's, the close's or the phone bar's, never all at once",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "assumed",
+    "where": "div.hero-text > div.hero__text > p.hero__lead > span \"8 недель\"",
+    "msg": "6 facts marked as assumed, for the report: \"8 недель\", \"от 75 BYN за м²\", \"от 20 BYN за м²\", \"от 600 BYN в месяц\", \"150 BYN\", \"150 BYN\"",
+    "fix": "list each assumed fact in the report for the client to confirm, or take it from the brief",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "form-send",
+    "where": "div.wrap > div.grid.grid--top > div.span-6.start-7:nth-of-type(2) > form.form \"mailto:hello@irvel.example\"",
+    "msg": "the form opens a mail to hello@irvel.example: a stand-in until the client gives its form address; list it in the report",
+    "fix": "send the form to the client's address (data-endpoint) and show the confirmation only after it answers; list a mailto stand-in in the report",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cta",
+    "where": "section#services \"Услуги и цены\"",
+    "msg": "a section over 1.5 screens long with no link or button in it",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cta",
+    "where": "section#work \"Три последних проекта\"",
+    "msg": "a section over 1.5 screens long with no link or button in it",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cta",
+    "where": "section#steps \"Проект за 3 этапа\"",
+    "msg": "a section over 1.5 screens long with no link or button in it",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#book / footer#contact",
+    "msg": "uneven space at the edge of a band: 48px outside its edge, 93px inside it (the space on either side of a change of ground reads as one gap only when the two match)",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "photo-set",
+    "where": "div.grid > article.card.card--row:nth-of-type(2) > div.panel > img.frame__img \"photo-f35456763-960.webp\"",
+    "msg": "7 photographs in more than one look: saturation from 0.04 to 0.42; the odd one out is photo-f35456763-960.webp",
+    "fix": "grade the photographs to one look (light, colour, warmth), or replace the odd one out",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "photo-weight",
+    "where": "main#top > section.hero.hero--photo > img.hero__bg \"photo-f62125506-1920.webp\"",
+    "msg": "a photograph is 3x or more wider than drawn on the phone, with no srcset: photo-f62125506-1920.webp is 1920px (290 KB) for a 390px frame; on a phone it arrives late and its frame shows only its ground until then",
+    "fix": "give each photograph srcset and sizes (a 800px and a 1600px file), or a smaller file: the frame never shows empty",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   }
+  ],
+  "crashed": [],
+  "seconds": {
+   "consistency": 103,
+   "layout": 4
+  }
+ },
+ "open": [
+  {
+   "check": "section-gaps",
+   "where": "section#steps / section#book",
+   "msg": "505px between these sections, +258% against the median 141px of gaps at a change of ground",
+   "fix": "use one gap between sections (all within 25% of each other)",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-gaps"
+   ],
+   "wheres": [
+    "section#steps / section#book"
+   ]
+  },
+  {
+   "check": "hero-lines",
+   "where": "section.hero h1",
+   "msg": "the check fills the h1 to 33 characters (this hero's maxChars in heroes.json), not the page's own: it takes 4 lines at 1440, 3 at most",
+   "fix": "the check fills the h1 to this hero's maxChars, not your own: take the next type pairing the deal printed (start.mjs); when the h1 is final and fits, waive it (target: section.hero h1)",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "hero-lines"
+   ],
+   "wheres": [
+    "section.hero h1"
+   ]
+  },
+  {
+   "check": "hero-fold",
+   "where": "section.hero.hero--photo section.hero.hero--photo \"Дизайн интерьера квартир в Минск\"",
+   "msg": "ends at y 886, past the fold (844): 1.05 screens tall",
+   "fix": "the hero fills the first screen alone, its button inside it",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "hero-fold"
+   ],
+   "wheres": [
+    "section.hero.hero--photo section.hero.hero--photo \"Дизайн интерьера квартир в Минск\""
+   ]
+  },
+  {
+   "check": "hero-maxchars",
+   "where": "section.hero.hero--photo section.hero.hero--photo \"Дизайн интерьера квартир в Минск\"",
+   "msg": "with a 33-character h1 (heroes.json maxChars): ends at y 886, past the fold (844): 1.05 screens tall",
+   "fix": "shorten the h1 or give the hero room for the longest headline",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "hero-maxchars"
+   ],
+   "wheres": [
+    "section.hero.hero--photo section.hero.hero--photo \"Дизайн интерьера квартир в Минск\""
+   ]
+  }
+ ],
+ "waived": [
+  {
+   "check": "copy-headline",
+   "where": "h1#hero-h \"Дизайн интерьера квартир в Минске\"",
+   "msg": "\"Дизайн интерьера квартир в Минске\" does not name what is sold (interior design, interior, design, from flags)",
+   "fix": "put the category noun in the h1 (and who it is for, or where), in 2 to 8 words",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "copy-headline"
+   ],
+   "wheres": [
+    "h1#hero-h \"Дизайн интерьера квартир в Минске\""
+   ],
+   "reason": "Russian page: «Дизайн интерьера» is the category noun (interior design) in Russian; the checker matches English words only"
+  }
+ ],
+ "warnCount": 19,
+ "at": "2026-11-18T11:14:15.724Z",
+ "openTold": true
+}

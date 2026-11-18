@@ -1,0 +1,30 @@
+gate: checking index.html (service); this takes a few minutes on a CPU Chrome
+gate: 8 FAIL open
+  FAIL section-gaps     section#steps / section#book  [390]
+       1169px between these sections (never on one screen), +729% against the median 141px
+       fix: use one gap between sections (all within 25% of each other)
+  FAIL off-viewport     header.nav.nav--centre > div.wrap.nav__bar > button.nav__toggle  [320]
+       at 320px wide it runs 27px past the screen's right edge (the page is 340px wide and scrolls sideways)
+       fix: keep it inside the screen at this width: let it shrink, wrap or stack
+  FAIL off-viewport     footer#contact > div.wrap > div.closing__cta.close--type "Обсудим вашу квартиру Первая вст  [320]
+       at 320px wide it runs 20px past the screen's right edge (the page is 340px wide and scrolls sideways)
+       fix: keep it inside the screen at this width: let it shrink, wrap or stack
+  FAIL off-viewport     footer#contact > div.wrap > div.closing__links "Ирвель Дизайн интерьера квартир в Минске"  [320]
+       at 320px wide it runs 20px past the screen's right edge (the page is 340px wide and scrolls sideways)
+       fix: keep it inside the screen at this width: let it shrink, wrap or stack
+  FAIL hero-lines       section.hero h1  [1440, 390]
+       the check fills the h1 to 33 characters (this hero's maxChars in heroes.json), not the page's own: it takes 4 lines at 1440, 3 at most
+       fix: the check fills the h1 to this hero's maxChars, not your own: take the next type pairing the deal printed (start.mjs); when the h1 is final and fits, waive it (target: section.hero h1)
+  FAIL screen-height    #steps section.section.ground-surface "Проект за 3 этапа На каждом этап"  [390]
+       2532px, 3.00 screens; a section is exactly one or two (--h), or on a phone at least one that its content fills
+       fix: make the section exactly one or two screens (--h: 1 or 2)
+  FAIL hero-fold        section.hero.hero--photo section.hero.hero--photo "Дизайн интерьера квартир в Минск"  [390]
+       ends at y 912, past the fold (844): 1.08 screens tall
+       fix: the hero fills the first screen alone, its button inside it
+  FAIL hero-maxchars    section.hero.hero--photo section.hero.hero--photo "Дизайн интерьера квартир в Минск"  [390]
+       with a 33-character h1 (heroes.json maxChars): ends at y 912, past the fold (844): 1.08 screens tall
+       fix: shorten the h1 or give the hero room for the longest headline
+  WAIVED copy-headline h1#hero-h "Дизайн интерьера квартир в Минске": Russian page: «Дизайн интерьера» is the category noun (interior design) in Russian; the checker matches English words only
+  20 WARN (not blocking), first: scroll-reveal section#approach > div.wrap > p.mo-wh__t; no-visual section#book "Запись на встречу"; copy-headline h1#hero-h "Дизайн интерьера квартир в Ми; copy-actions (the page); section-gaps main#top > section.hero.hero--photo / se
+A FAIL you judge false: add {"check": "<id>", "target": "<its where, enough to name that one finding>", "reason": "<why, 12+ characters>"} to .taste-skill/waivers.json (one finding each, 5 at most, never for kit-edited or checker-gaming); it goes in your report. Never edit the kit's files or hide the page from the checker.
+GATE: FAIL 8 (round 2 of 3)

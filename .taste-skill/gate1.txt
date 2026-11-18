@@ -1,0 +1,136 @@
+gate: 44 FAIL open (page unchanged since the last run: results reused, not a new round)
+  FAIL no-visual        section#book "Запись на консультацию"  [1440, 390]
+       no picture, effect or mock in this section; a feature section needs a visual
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL copy-headline    h1#hero-h "Дизайн интерьера квартир в Минске"  [1440]
+       "Дизайн интерьера квартир в Минске" does not name what is sold (interior design, interior, design, from flags)
+       fix: put the category noun in the h1 (and who it is for, or where), in 2 to 8 words
+  FAIL section-gaps     section#book / footer#contact  [1440]
+       567px between these sections, +163% against the median 216px of gaps at a change of ground
+       fix: use one gap between sections (all within 25% of each other)
+  FAIL empty-area       section#book "Запись на консультацию"  [1440]
+       53% of the section is empty: 352px under its last (a.link), 4% beside content that covers under half the container, in its 720px of rows (WARN over 35%, FAIL over 50%)
+       fix: fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)
+  FAIL section-air      section#book "Запись на консультацию Напишите площадь "  [1440]
+       the content fills 37.4% of the section's height (337 of 900px): 55% or more (40% WARN) (SR-3)
+       fix: fill the section to 55%: more content, a picture or a background layer, or merge it into the section above as its last block
+  FAIL row-lines        footer#contact > div.wrap > div.closing__links > div.grid "Ирвель Дизайн интерьера квартир  [1440]
+       a row of 4 items: its last item ends at 1143px, the container's right line at 1360px (2px either way) (SR-7)
+       fix: start the row's first item on the container's left line and end its last on the right line, every item one height
+  FAIL flush            div.wrap > div.grid.grid--top > div.frame.frame--photo > img.frame__img "img: Гостиная с с  [390]
+       section#services and section#work run together: -131px between their content, on one ground
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  FAIL flush            div.grid.grid--top > div.span-6.start-7 > form.form > p.t-small.muted "Отвечаю в течение д  [390]
+       its last line sits 4px above the lower edge of section#book, where the ground changes to the footer
+       fix: give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)
+  FAIL nav              header.nav.nav--centre  [390]
+       the nav has no bar, and its pieces sit past the content's edges (50-383px against 24-366px)
+       fix: make the nav one bar from the content's left edge to its right edge, with every link and action inside it
+  FAIL off-viewport     footer#contact > div.wrap > div.closing__cta.close--type > a.btn.btn--primary "Записаться   [390]
+       runs 4px off the right side of the screen
+       fix: keep it inside the screen at this width: let it shrink, wrap or stack
+  FAIL off-viewport     (the page)  [390]
+       the page is 394px wide on a 390px screen and scrolls sideways
+       fix: keep it inside the screen at this width: let it shrink, wrap or stack
+  FAIL collide          section#services > div.wrap > div.grid.grid--top > div.frame.frame--photo  [390]
+       the words "Три последних проекта" and the card div.grid.grid--top > div.frame.frame--photo of another section lie in one place: the card runs out of its section, which is shorter than what it holds
+       fix: on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons;
+  FAIL no-visual        section#services "Услуги и цены"  [390]
+       no picture, effect or mock in this section; a feature section needs a visual
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL contrast         section#work > div.wrap > div.section-head > p "Кухня с ореховыми панелями, гостиная в т"  [390]
+       body text over a picture reads at 2.1:1 at its worst tenth (needs 4.5:1), on a busy ground
+       fix: put the text on a calm part of the picture, or on a solid panel
+  FAIL photo-upscale    main#top > section.hero.hero--photo > img.hero__bg "img: Светлая гостиная с синим диваном,  [390]
+       photo-f62125506-960.webp: 389x260 shown at 390x354, blown up 1.36x
+       fix: use a source at least as wide as the picture is shown (twice that for sharp screens)
+  FAIL collide          div.span-5.stack-4 > ul.rows > li:nth-of-type(3) > span.rows__name "Авторский надзор"  [320]
+       the words "Авторский надзор" lie over "Три последних проекта" of another section: two lines in one place (they run out of their own section, which is shorter than what it holds)
+       fix: on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons;
+  FAIL collide          div.span-5.stack-4 > ul.rows > li:nth-of-type(3) > p "Два выезда на объект в месяц и ответ  [320]
+       the words "Два выезда на объект в месяц и о" lie over "Три последних проекта" of another section: two lines in one place (they run out of their own section, which is shorter than what it holds)
+       fix: on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons;
+  FAIL collide          div.span-5.stack-4 > ul.rows > li:nth-of-type(3) > span.rows__value "от 600 BYN в месяц"  [320]
+       the words "от 600 BYN в месяц" lie over "Три последних проекта" of another section: two lines in one place (they run out of their own section, which is shorter than what it holds)
+       fix: on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons;
+  FAIL collide          div.span-5.stack-4 > ul.rows > li:nth-of-type(4) > span.rows__name "Консультация на объект  [320]
+       the words "Консультация на объекте" and the card div.grid > div.frame.frame--photo:nth-of-type(1) of another section lie in one place: the words run out of their section, which is shorter than what it holds
+       fix: on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons;
+  FAIL collide          div.span-5.stack-4 > ul.rows > li:nth-of-type(4) > p "Два часа в квартире: планировка, све  [320]
+       the words "Два часа в квартире: планировка," and the card div.grid > div.frame.frame--photo:nth-of-type(1) of another section lie in one place: the words run out of their section, which is shorter than what it holds
+       fix: on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons;
+  FAIL collide          div.span-6.start-7 > form.form > div.btn-row > button.btn.btn--primary "Записаться на конс  [320]
+       the words "Записаться на консультацию" lie over "Первая встреча стоит 150 BYN и з" of another section: two lines in one place (they run out of their own section, which is shorter than what it holds)
+       fix: on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons;
+  FAIL collide          div.grid.grid--top > div.span-6.start-7 > form.form > p.t-small.muted "Отвечаю в течение д  [320]
+       the words "Отвечаю в течение дня, кроме вос" lie over "Записаться на консультацию" of another section: two lines in one place (they run out of their own section, which is shorter than what it holds)
+       fix: on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons;
+  FAIL collide          input#f-district  [320]
+       the words "Обсудим вашу квартиру" and the card input#f-district of another section lie in one place: the card runs out of its section, which is shorter than what it holds
+       fix: on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons;
+  FAIL off-viewport     header.nav.nav--centre > div.wrap.nav__bar "К содержанию Ирвель Записаться на консул"  [320]
+       at 320px wide it runs 50px past the screen's right edge (the page is 394px wide and scrolls sideways)
+       fix: keep it inside the screen at this width: let it shrink, wrap or stack
+  FAIL off-viewport     footer#contact > div.wrap > div.closing__cta.close--type "Обсудим вашу квартиру Первая вст  [320]
+       at 320px wide it runs 74px past the screen's right edge (the page is 394px wide and scrolls sideways)
+       fix: keep it inside the screen at this width: let it shrink, wrap or stack
+  FAIL off-viewport     footer#contact > div.wrap > div.closing__links "Ирвель Дизайн интерьера квартир в Минске"  [320]
+       at 320px wide it runs 74px past the screen's right edge (the page is 394px wide and scrolls sideways)
+       fix: keep it inside the screen at this width: let it shrink, wrap or stack
+  FAIL sparse           #book section.section "Запись на консультацию Напишите "  [1440]
+       its content fills 37% of its screen; merge it or give it its visual (0.55 is the aim)
+       fix: fill the section or make it a screen shorter
+  FAIL hero-lines       section.hero h1  [1440, 390]
+       the check fills the h1 to 33 characters (this hero's maxChars in heroes.json), not the page's own: it takes 4 lines at 1440, 3 at most
+       fix: the check fills the h1 to this hero's maxChars, not your own: take the next type pairing the deal printed (start.mjs); when the h1 is final and fits, waive it (target: section.hero h1)
+  FAIL bleed-one-side   #contact div.closing__cta.close--type "Обсудим вашу квартиру Первая вст"  [390]
+       runs from x 24 out to the right viewport edge; the left side stays at 24
+       fix: bleed the visual to both edges or keep it on the .wrap lines
+  FAIL bleed-one-side   #contact div.closing__links "Ирвель Дизайн интерьера квартир "  [390]
+       runs from x 24 out to the right viewport edge; the left side stays at 24
+       fix: bleed the visual to both edges or keep it on the .wrap lines
+  FAIL bleed-one-side   #contact div.span-4.stack-4 "Ирвель Дизайн интерьера квартир "  [390]
+       runs from x 24 out to the right viewport edge; the left side stays at 24
+       fix: bleed the visual to both edges or keep it on the .wrap lines
+  FAIL bleed-one-side   #contact div.span-2.footer__col "РаботыПроектыПодход"  [390]
+       runs from x 215.2 out to the right viewport edge; the left side stays at 24
+       fix: bleed the visual to both edges or keep it on the .wrap lines
+  FAIL edge-right       nav actions  [390]
+       end at x 396.2, the page's right line is 366
+       fix: end it on the .wrap right line
+  FAIL screen-short (screen-height) #services section.section "Услуги и цены Цена считается по "  [390]
+       844px tall; one screen under the nav is 853px
+       fix: make the section one full screen (--h: 1, layout-v4.md section 2)
+  FAIL neighbour        #work section.section "Три последних проекта Кухня с ор"  [390]
+       framed, 168px of #services section.section "Услуги и цены Цена считается по " shows
+       fix: keep the next section's heading and picture out of this screen
+  FAIL screen-short (screen-height) #approach section.section.statement "Подход Я начинаю с того, как вы "  [390]
+       844px tall; one screen under the nav is 853px
+       fix: make the section one full screen (--h: 1, layout-v4.md section 2)
+  FAIL neighbour-ground #approach section.section.statement "Подход Я начинаю с того, как вы "  [390]
+       framed, 9px of #steps section.section.ground-surface "Проект за 3 этапа На каждом этап"'s ground shows
+       fix: end the ground with the section
+  FAIL neighbour        #steps section.section.ground-surface "Проект за 3 этапа На каждом этап"  [390]
+       framed, 57px of #book section.section "Запись на консультацию Напишите " shows
+       fix: keep the next section's heading and picture out of this screen
+  FAIL screen-short (screen-height) #book section.section "Запись на консультацию Напишите "  [390]
+       844px tall; one screen under the nav is 853px
+       fix: make the section one full screen (--h: 1, layout-v4.md section 2)
+  FAIL neighbour        #book section.section "Запись на консультацию Напишите "  [390]
+       framed, 9px of the footer shows
+       fix: keep the next section's heading and picture out of this screen
+  FAIL hero-fold        section.hero.hero--photo section.hero.hero--photo "Дизайн интерьера квартир в Минск"  [390]
+       ends at y 912, past the fold (853): 1.07 screens tall
+       fix: the hero fills the first screen alone, its button inside it
+  FAIL overflow-x       page  [390]
+       the page scrolls sideways
+       fix: remove what scrolls sideways
+  FAIL hero-maxchars    section.hero.hero--photo section.hero.hero--photo "Дизайн интерьера квартир в Минск"  [390]
+       with a 33-character h1 (heroes.json maxChars): ends at y 912, past the fold (853): 1.07 screens tall
+       fix: shorten the h1 or give the hero room for the longest headline
+  FAIL hero-maxchars    page  [390]
+       with a 33-character h1 the page scrolls sideways
+       fix: shorten the h1 or give the hero room for the longest headline
+  19 WARN (not blocking), first: scroll-reveal section#approach > div.wrap > p.mo-wh__t; copy-headline h1#hero-h "Дизайн интерьера квартир в Ми; copy-actions (the page); section-gaps main#top > section.hero.hero--photo / se; photo-set div.grid > article.card.card--row:nth-of
+A FAIL you judge false: add {"check": "<id>", "target": "<its where, enough to name that one finding>", "reason": "<why, 12+ characters>"} to .taste-skill/waivers.json (one finding each, 5 at most, never for kit-edited or checker-gaming); it goes in your report. Never edit the kit's files or hide the page from the checker.
+GATE: FAIL 44 (round 1 of 3)

@@ -1,0 +1,11 @@
+{
+ "page": "index.html",
+ "url": null,
+ "root": null,
+ "kind": "service",
+ "category": "interior design",
+ "primary": "Book a consultation",
+ "rounds": 3,
+ "start": "2026-11-18T10:35:23.166Z",
+ "by": "gate.mjs --start"
+}

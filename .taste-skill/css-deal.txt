@@ -1,0 +1,23 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/backgrounds/backgrounds.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<link rel="stylesheet" href="assets/icons/icon.css">
+<!-- <html lang="en" data-radius="soft">; keep this <style> after the links: layout.css resets --ly-scale -->
+<style>
+:root {
+  --p-bg: #f4efe5; --p-surface: #e7dfcf; --p-ink: #29251e; --p-muted: #675e51;
+  --p-accent: #8c6418; --p-accent-ink: #ffffff; --p-action: #8c6418; --p-action-ink: #ffffff;
+  --p-inv-bg: #29251e; --p-inv-surface: #35312a; --p-inv-ink: #f4efe5; --p-inv-muted: #a09b92;
+  --p-inv-accent: #f4efe5; --p-inv-accent-ink: #29251e; --p-inv-action: #f4efe5; --p-inv-action-ink: #29251e;
+  --font-display: "Onest", system-ui, sans-serif;
+  --font-text: "Onest", system-ui, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.035em;
+  --display-tracking-xl: -0.04em;
+}
+</style>

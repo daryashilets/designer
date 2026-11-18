@@ -1,0 +1,18 @@
+gate: checking index.html (service); this takes a few minutes on a CPU Chrome
+gate: rounds used up; 4 FAIL open
+  FAIL section-gaps     section#steps / section#book  [390]
+       505px between these sections, +258% against the median 141px of gaps at a change of ground
+       fix: use one gap between sections (all within 25% of each other)
+  FAIL hero-lines       section.hero h1  [1440, 390]
+       the check fills the h1 to 33 characters (this hero's maxChars in heroes.json), not the page's own: it takes 4 lines at 1440, 3 at most
+       fix: the check fills the h1 to this hero's maxChars, not your own: take the next type pairing the deal printed (start.mjs); when the h1 is final and fits, waive it (target: section.hero h1)
+  FAIL hero-fold        section.hero.hero--photo section.hero.hero--photo "Дизайн интерьера квартир в Минск"  [390]
+       ends at y 886, past the fold (844): 1.05 screens tall
+       fix: the hero fills the first screen alone, its button inside it
+  FAIL hero-maxchars    section.hero.hero--photo section.hero.hero--photo "Дизайн интерьера квартир в Минск"  [390]
+       with a 33-character h1 (heroes.json maxChars): ends at y 886, past the fold (844): 1.05 screens tall
+       fix: shorten the h1 or give the hero room for the longest headline
+  WAIVED copy-headline h1#hero-h "Дизайн интерьера квартир в Минске": Russian page: «Дизайн интерьера» is the category noun (interior design) in Russian; the checker matches English words only
+  19 WARN (not blocking), first: scroll-reveal section#approach > div.wrap > p.mo-wh__t; no-visual section#book "Запись на встречу"; copy-headline h1#hero-h "Дизайн интерьера квартир в Ми; copy-actions (the page); section-gaps main#top > section.hero.hero--photo / se
+Stop fixing: put these open FAILs and the waivers in your report, then finish.
+GATE: OPEN 4 (rounds used up)
